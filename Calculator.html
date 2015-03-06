@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <link href= "Mystyle.css" rel="Stylesheet" type="text/css" />
+	<link href= "Navigation.css" rel="Stylesheet" type="text/css" />
+	<link href= "Styles.css" rel="Stylesheet" type="text/css" />
+	<title>Cortex Hub</title>
+	<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+	<script type="text/javascript" src="keys.js"></script>
+        <link rel="stylesheet" media="screen, print, handheld" type="text/css" href="Calc.css" />
+	
+
+</head>
+<body>
+	<div id="page-wrap">
+		
+		<div id="menu"   align="center">
+			<ul> 
+				<li><a href="Index.html" target="_blank">Registration</a></li>
+				<li><a href="calculator.html" target="_blank">Calculator</a></li>
+				<li><a href="Word.html" target="_blank">Personal Journal</a></li>
+				<li><a href="Converter.html" target="_blank">Currency Converter</a></li>	
+			</ul>
+		</div>
+	
+		<br><br>
+	
+		<table class="calculator" id="calc">
+				<tr>
+					<td colspan="4" class="calc_td_result">
+						<input type="text" readonly="readonly" name="calc_result" id="calc_result" class="calc_result" onkeydown="javascript:key_detect_calc('calc',event);" />
+					</td>
+				</tr>
+				<tr>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="CE" onclick="javascript:f_calc('calc','ce');" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="&larr;" onclick="javascript:f_calc('calc','nbs');" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="%" onclick="javascript:f_calc('calc','%');" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="+" onclick="javascript:f_calc('calc','+');" />
+					</td>
+				</tr>
+				<tr>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="7" onclick="javascript:add_calc('calc',7);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="8" onclick="javascript:add_calc('calc',8);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="9" onclick="javascript:add_calc('calc',9);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="-" onclick="javascript:f_calc('calc','-');" />
+					</td>
+				</tr>
+							<tr>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="4" onclick="javascript:add_calc('calc',4);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="5" onclick="javascript:add_calc('calc',5);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="6" onclick="javascript:add_calc('calc',6);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="x" onclick="javascript:f_calc('calc','*');" />
+					</td>
+				</tr>
+				<tr>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="1" onclick="javascript:add_calc('calc',1);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="2" onclick="javascript:add_calc('calc',2);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="3" onclick="javascript:add_calc('calc',3);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="&divide;" onclick="javascript:f_calc('calc','');" />
+					</td>
+				</tr>
+				<tr>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="0" onclick="javascript:add_calc('calc',0);" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="&plusmn;" onclick="javascript:f_calc('calc','+-');" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="," onclick="javascript:add_calc('calc','.');" />
+					</td>
+					<td class="calc_td_btn">
+							<input type="button" class="calc_btn" value="=" onclick="javascript:f_calc('calc','=');" />
+					</td>
+				</tr>
+		</table>
+		<br><br>
+		<div id="footer">
+			Copyright © W3Schools.com
+		</div>
+	</div>
+		
+		<script type="text/javascript">
+                document.getElementById('calc').onload=init_calc('calc');
+        </script>
+</body>
+</html>

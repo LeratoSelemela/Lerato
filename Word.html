@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <link href= "Mystyle.css" rel="Stylesheet" type="text/css" />
+	<link href= "Navigation.css" rel="Stylesheet" type="text/css" />
+	<title>Cortex Hub</title>
+	<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+
+	<script language="JavaScript">
+		function countit(what){
+
+		//Character count script- by javascriptkit.com
+		//Visit JavaScript Kit (http://javascriptkit.com) for script
+		//Credit must stay intact for use
+
+		formcontent=what.form.charcount.value
+		what.form.displaycount.value=formcontent.length
+		}
+	</script>
+	
+</head>
+<body>
+
+	<div id="page-wrap">
+		
+		<div id="menu"   align="center">
+			<ul> 
+				<li><a href="Index.html" target="_blank">Registration</a></li>
+				<li><a href="calculator.html" target="_blank">Calculator</a></li>
+				<li><a href="Word.html" target="_blank">Personal Journal</a></li>
+				<li><a href="Converter.html" target="_blank">Currency Converter</a></li>	
+			</ul>
+		</div>
+			<br><br>
+	
+		<form method="POST">
+
+			<table border="0" cellspacing="0" cellpadding="0" align="center">
+				<tr>
+				  <td width="100%">
+					<textarea rows="12" name="charcount" cols="60" wrap="virtual"></textarea>
+				  </td>
+				</tr>
+				<tr>
+				  <td width="100%"><div align="right">
+					<p><input type="button" value="Number of Characters"
+					onClick="countit(this)"> <input type="text" name="displaycount" size="20"></p>
+					<div align="center"><center><p>
+					<a href="http://javascriptkit.com"></a></p>
+					</center></div></div>
+				  </td>
+				</tr>
+			  </table>
+
+		</form>
+		
+		<br><br>
+		<div id="footer">
+				Copyright © W3Schools.com
+		</div>
+		
+	</div>
+</body>
+</html>

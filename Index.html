@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<link href= "Mystyle.css" rel="Stylesheet" type="text/css" />
+		<link href= "Navigation.css" rel="Stylesheet" type="text/css" />
+		<link href= "Navigation.css" rel="Stylesheet" type="text/css" />
+		
+		
+		
+		<title>Cortex Hub</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		
+		
+		
+		<script language="javascript">
+
+			function validateInputs() {
+
+				if (document.frmStudentInfo.txtLastName.value == "") {
+					alert("Please entere your last name");
+					return false;
+				}
+				else if (document.frmStudentInfo.txtFirstName.value == "") {
+					alert("Please entere your first name");
+					return false;
+				}
+				else if (document.frmStudentInfo.txtS_Mi.value == "") {
+					alert("Please entere your MI");
+					return false;
+				}
+				else if (document.frmStudentInfo.txtS_Add.value == "") {
+					alert("Please entere your residential address");
+					return false;
+				}
+				else if (document.frmStudentInfo.txtS_City.value == "") {
+					alert("Please entere your city of resident");
+					return false;
+				}
+				else if (document.frmStudentInfo.txtS_State.value == "") {
+					alert("Please entere your state");
+					return false;
+				}
+				else if (document.frmStudentInfo.txtS_Zip.value == "NaN") {
+					alert("Please entere your zip code");
+					return false;
+				}
+				else if (document.frmStudentInfo.txtS_Phone.value == "") {
+					alert("Please entere your phone number");
+					return false;
+				}
+				else if (document.frmStudentInfo.txtS_Dob.value == "NaN") {
+					alert("Please entere your date of birth.date format (mm/dd/yyyy)");
+					return false;
+				}
+
+				var classChecked = false;
+
+				for (var i = 0; i < document.frmStudentInfo.optS_Class.length; i++) {
+					if (document.frmStudentInfo.optS_Class[i].checked) {
+						classChecked = true;
+
+					}
+				}
+
+				//data validation condtion
+
+				if (classChecked == false) {
+					alert("Please select a class:");
+					return false;
+				}
+				else {
+					return true;
+				}
+
+			}
+
+		 </script>
+		 
+		 <script src="js/libs/jquery.secret-source.min.js"></script>
+
+		<script>
+			jQuery(function($) {
+				$('.secret-source').secretSource({
+					includeTag: false
+				});
+			});
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="page-wrap">
+		
+			<div id="menu"   align="center">
+				<ul> 
+					<li><a href="Index.html" target="_blank">Registration</a></li>
+					<li><a href="calculator.html" target="_blank">Calculator</a></li>
+					<li><a href="Word.html" target="_blank">Personal Journal</a></li>
+					<li><a href="Converter.html" target="_blank">Currency Converter</a></li>	
+				</ul>
+			</div>
+
+			<br><br>
+			
+			<form name="frmStudentInfo" action="action marker" onsubmit="return validateInputs()">
+				<table align="center">
+					<tr><td>&nbsp;Last Name:</td>
+						<td><input type="text" name="txtLastName" size="20"><td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><h4>Class:</h4></td>
+						<td></td>
+					</tr>
+					<tr><td>&nbsp;First Name:</td>
+						<td><input type="text" name=txtFirstName size="20" ></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><input type="radio" name="optS_Class" value="Freshman"></td>
+						<td>Freshman</td>
+					</tr>
+					<tr><td>&nbsp;MI:</td>
+						<td><input type="text" name="txtS_Mi" size="5"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><input type="radio" name="optS_Class" value="Sophomore"></td>
+						<td>Sophomore</td>
+					</tr>
+					<tr><td>&nbsp;Address:</td>
+						<td><input type="text" name="txtS_Add" size="20"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><input type="radio" name="optS_Class" value="Junior"></td>
+						<td>Junior</td>
+					</tr>
+					<tr><td>&nbsp;City:</td>
+						<td><input type="text" name="txtS_City" size="20"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><input type="radio" name="optS_Class" value="Senior"></td>
+						<td>Senior</td>
+					</tr>
+					<tr><td>&nbsp;State:</td>
+						<td><input type="text" name="txtS_State" size="5"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td><input type="radio" name="optS_Class" value="Graduate"></td>
+						<td>Graduate</td>
+					</tr>
+					<tr><td>&nbsp;ZIP Code:</td>
+						<td><input type="text" name="txtS_Zip" size="20"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr><td>&nbsp;Phone:</td>
+						<td><input type="text" name="txtS_Phone" size="20"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>:<input name="chkResident" type="checkbox"></td>
+						<td>&nbsp;Wisconsin Resident
+						</td>
+					</tr>
+					<tr><td>&nbsp;Date of Birth:</td>
+						<td><input type="text" name="txtS_Dob" size="20"></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>Advisor</td>
+						<td>
+							<select size="1" name="lstF_ID"> 
+								<OPTION selected>1 (Kim Cox)</OPTION> 
+								<OPTION>2 (John Blanchard)</OPTION> 
+								<OPTION>3 (Jerry Williams)</OPTION> 
+								<OPTION>4 (Laura Sheng)</OPTION> 
+								<OPTION>5 (Phillip Brown)</OPTION>
+							</select></td>
+					</tr>
+					<tr><td></td><td><input type="Submit" value="Submit"></td></tr>
+				</table>
+			</form>	
+			<div id="footer">
+				Copyright © W3Schools.com
+			</div>
+		</div>
+		
+		 
+			<!--
+			<footer>
+				<p>This is the footer 2012: <a href="http://jigsaw.w3.org/css-validator/check/referer"> 
+					 <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid 
+					CSS!"/> 
+					 </a>
+				</p>
+			</footer> 
+			
+			<div id="footer">
+					Copyright © W3Schools.com
+				</div> -->
+	   
+		
+		
+		
+	</body>
+</html>
